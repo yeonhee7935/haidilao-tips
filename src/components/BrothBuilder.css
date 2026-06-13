@@ -1,0 +1,267 @@
+.broth-builder-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: slideUp var(--transition-normal);
+}
+
+/* Combo list view */
+.broth-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bold-combo-card {
+  background: var(--hdl-white);
+  padding: 28px;
+  border-radius: var(--hdl-radius-md);
+  border: 2px solid var(--hdl-red);
+  box-shadow: var(--hdl-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.bold-combo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--hdl-shadow-md);
+}
+
+.combo-card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 16px;
+}
+
+.combo-title {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--hdl-red);
+  flex-grow: 0;
+  margin: 0;
+}
+
+.combo-price-badge {
+  font-size: 15px;
+  font-weight: 900;
+  background: linear-gradient(
+    135deg,
+    var(--hdl-accent-light) 0%,
+    var(--hdl-red-lighter) 100%
+  );
+  color: var(--hdl-red);
+  padding: 8px 16px;
+  border-radius: var(--hdl-radius-md);
+  border: 2px solid var(--hdl-red);
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(230, 57, 70, 0.15);
+}
+
+.combo-description {
+  font-size: 16px;
+  color: var(--hdl-gray);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Combo Detail Grid */
+.combo-details-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .combo-details-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+}
+
+/* Cute Pot Visualizer */
+.combo-pot-visualizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background: transparent;
+  border-radius: var(--hdl-radius-md);
+  border: none;
+}
+
+.combo-pot-box {
+  width: 160px;
+  height: 160px;
+  border-radius: var(--hdl-radius-md);
+  background: linear-gradient(135deg, #c3bdae 0%, #b5aea0 100%);
+  border: 8px solid #8c8373;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 4px 12px rgba(44, 24, 16, 0.2);
+}
+
+.combo-pot-cell {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+}
+
+/* 2 splits */
+.combo-pot-box.two-split .combo-pot-cell {
+  width: 50%;
+  height: 100%;
+}
+.combo-pot-box.two-split .combo-pot-cell:first-child {
+  left: 0;
+  border-right: 3px solid #8c8373;
+}
+.combo-pot-box.two-split .combo-pot-cell:last-child {
+  right: 0;
+  border-left: 3px solid #8c8373;
+}
+
+/* 4 splits */
+.combo-pot-box.four-split .combo-pot-cell {
+  width: 50%;
+  height: 50%;
+}
+.combo-pot-box.four-split .combo-pot-cell:nth-child(1) {
+  left: 0;
+  top: 0;
+  border-right: 2px solid #8c8373;
+  border-bottom: 2px solid #8c8373;
+}
+.combo-pot-box.four-split .combo-pot-cell:nth-child(2) {
+  right: 0;
+  top: 0;
+  border-left: 2px solid #8c8373;
+  border-bottom: 2px solid #8c8373;
+}
+.combo-pot-box.four-split .combo-pot-cell:nth-child(3) {
+  left: 0;
+  bottom: 0;
+  border-right: 2px solid #8c8373;
+  border-top: 2px solid #8c8373;
+}
+.combo-pot-box.four-split .combo-pot-cell:nth-child(4) {
+  right: 0;
+  bottom: 0;
+  border-left: 2px solid #8c8373;
+  border-top: 2px solid #8c8373;
+}
+
+.combo-cell-name {
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+/* Info Panel */
+.combo-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-title {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--hdl-red);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hacks-bullet-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hacks-bullet-list li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--hdl-gray);
+  position: relative;
+  padding-left: 20px;
+}
+
+.hacks-bullet-list li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  font-size: 16px;
+}
+
+.combo-pairings-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.combo-pairing-tag {
+  background: linear-gradient(
+    135deg,
+    var(--hdl-accent-light) 0%,
+    var(--hdl-red-lighter) 100%
+  );
+  border: 1.5px solid var(--hdl-red-light);
+  padding: 6px 14px;
+  border-radius: var(--hdl-radius-md);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--hdl-dark);
+  transition: all 0.2s ease;
+}
+
+.combo-pairing-tag:hover {
+  border-color: var(--hdl-red);
+  background: linear-gradient(135deg, #ffe0ea 0%, #ffd6e8 100%);
+  transform: scale(1.05);
+}
+
+/* Mobile Overrides */
+@media (max-width: 600px) {
+  .broth-header h2 {
+    font-size: 26px;
+  }
+  .bold-combo-card {
+    padding: 20px;
+  }
+  .combo-title {
+    font-size: 18px;
+  }
+  .combo-price-badge {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+  .combo-description {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .hacks-bullet-list li {
+    font-size: 13px;
+  }
+  .combo-pairing-tag {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}

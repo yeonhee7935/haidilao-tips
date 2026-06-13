@@ -1,0 +1,126 @@
+.sauce-mixer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: slideUp var(--transition-normal);
+}
+
+.recipes-view {
+  width: 100%;
+}
+
+.bold-recipes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bold-recipe-card {
+  background: var(--hdl-white);
+  padding: 28px;
+  border-radius: var(--hdl-radius-md);
+  border: 2px solid var(--hdl-red);
+  box-shadow: var(--hdl-shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.bold-recipe-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--hdl-shadow-md);
+}
+
+.recipe-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  gap: 12px;
+}
+
+.recipe-title-text {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--hdl-red);
+  margin: 0;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.toggle-icon {
+  font-size: 16px;
+  color: var(--hdl-red);
+  font-weight: 900;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.recipe-ingredients-list-flat {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 500px) {
+  .recipe-ingredients-list-flat {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flat-ingredient-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--hdl-gray-light);
+  border: 1.5px solid var(--hdl-red);
+  padding: 14px 16px;
+  border-radius: var(--hdl-radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.flat-ingredient-badge:hover {
+  background: var(--hdl-red-light);
+}
+
+.flat-ing-name {
+  color: var(--hdl-dark);
+  flex-grow: 1;
+  font-weight: 600;
+}
+
+.flat-ing-ratio {
+  color: var(--hdl-red);
+  background: var(--hdl-white);
+  padding: 4px 12px;
+  border-radius: var(--hdl-radius-sm);
+  border: 1.5px solid var(--hdl-red);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .sauce-header h2 {
+    font-size: 28px;
+  }
+  .bold-recipe-card {
+    padding: 20px;
+  }
+  .recipe-title-text {
+    font-size: 20px;
+  }
+  .recipe-desc-text {
+    font-size: 14px;
+  }
+  .flat-ingredient-badge {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}
