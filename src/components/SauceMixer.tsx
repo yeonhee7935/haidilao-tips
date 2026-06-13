@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import "./SauceMixer.css";
 
-interface Ingredient {
-  id: string;
-  name: string;
-  category: string;
-}
-
 interface SauceRecipe {
   id: string;
   name: string;

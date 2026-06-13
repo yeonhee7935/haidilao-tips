@@ -4,7 +4,6 @@ import "./BrothBuilder.css";
 interface BrothCombo {
   id: string;
   name: string;
-  price: string;
   layout: "two" | "four";
   description: string;
   grids: { name: string; color: string; textColor: string }[];
