@@ -18,13 +18,13 @@ function App() {
             className={`btn-nav-tab ${activeTab === "sauce" ? "active" : ""}`}
             onClick={() => setActiveTab("sauce")}
           >
-            소스 비법
+            소스
           </button>
           <button
             className={`btn-nav-tab ${activeTab === "broth" ? "active" : ""}`}
             onClick={() => setActiveTab("broth")}
           >
-            탕 조합
+            탕
           </button>
           <button
             className={`btn-nav-tab ${activeTab === "wiki" ? "active" : ""}`}
